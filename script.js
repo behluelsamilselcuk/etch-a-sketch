@@ -10,3 +10,12 @@ for (let i = 0; i < (16*16); i++) {
 
     container.appendChild(grid);
 }
+
+
+const gridDivs = document.querySelectorAll('.grid');
+
+gridDivs.forEach(div => {
+    div.addEventListener('mouseenter', () => {
+        div.style.backgroundColor = 'grey';
+    })
+});
