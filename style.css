@@ -4,11 +4,15 @@
 
 body {
     margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #container {
-    height: 256px;
-    width: 256px;
+    height: 900px;
+    width: 900px;
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
@@ -17,4 +21,16 @@ body {
 
 .grid {
     border: 1px solid black;
+}
+
+#etch-a-sketch {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#changeGridBtn {
+    width: 100px;
+    height: 35px;
+    align-self: flex-end;
 }
