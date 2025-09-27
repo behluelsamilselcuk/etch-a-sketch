@@ -21,8 +21,11 @@ function createGrid() {
     });
 
     let numOfGrids = prompt('Wie viele Quadrate pro Seite willst du haben?\n(von 0 bis 100)', '');
-    if (numOfGrids > 100 || numOfGrids < 0) {
+    while (numOfGrids > 100 || numOfGrids < 0 || isNaN(numOfGrids)) {
         numOfGrids = prompt('Es muss eine Zahl von 0 bis 100 sein!', '');
+    }
+    while (numOfGrids === null || numOfGrids === '' || numOfGrids === undefined) {
+        return
     }
 
     for (let i = 0; i < (numOfGrids**2); i++) {
