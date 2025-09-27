@@ -20,9 +20,9 @@ function createGrid() {
         grid.remove();
     });
 
-    let numOfGrids = prompt('Wie viele Quadrate pro Seite willst du haben?\n(von 0 bis 100)', '');
-    while (numOfGrids > 100 || numOfGrids < 0 || isNaN(numOfGrids)) {
-        numOfGrids = prompt('Es muss eine Zahl von 0 bis 100 sein!', '');
+    let numOfGrids = prompt('Wie viele Quadrate pro Seite willst du haben?\n(von 1 bis 100)', '');
+    while (numOfGrids > 100 || numOfGrids < 1 || isNaN(numOfGrids)) {
+        numOfGrids = prompt('Es muss eine Zahl von 1 bis 100 sein!', '');
     }
     while (numOfGrids === null || numOfGrids === '' || numOfGrids === undefined) {
         return
