@@ -20,7 +20,10 @@ function createGrid() {
         grid.remove();
     });
 
-    const numOfGrids = prompt('Wie viele Quadrate pro Seite willst du haben?', '');
+    let numOfGrids = prompt('Wie viele Quadrate pro Seite willst du haben?\n(von 0 bis 100)', '');
+    if (numOfGrids > 100 || numOfGrids < 0) {
+        numOfGrids = prompt('Es muss eine Zahl von 0 bis 100 sein!', '');
+    }
 
     for (let i = 0; i < (numOfGrids**2); i++) {
         const grid = document.createElement('div');
